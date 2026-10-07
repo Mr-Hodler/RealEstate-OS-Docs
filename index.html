@@ -8,100 +8,585 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="top"><div class="wrap">
-<span class="brand"><a href="index.html">Real Estate OS</a></span>
-<span class="ver">v4.3 &middot; 07.10.2026</span>
+<header class="top"><div class="top-i">
+<span class="badge">REAL ESTATE OS</span>
+<span class="ver">v4.5 &middot; 07.10.2026</span>
+<span class="sp"></span>
+<span class="lang" role="group" aria-label="lingua">
+<button type="button" data-l="it" aria-pressed="true">IT</button>
+<button type="button" data-l="en" aria-pressed="false">EN</button>
+</span>
 </div></header>
-<main class="wrap">
-
-<h1>Lo strumento interno di Orizon21 Group per il lavoro ricorrente di un'operazione immobiliare</h1>
-<p class="lead">Tredici skill. Il lato capitale: modello, due diligence, investitori, strutturazione, compliance. Il lato contenuti: schede, brochure, documentazione di vendita. Leggono gli stessi fatti, quindi un numero in una brochure non può contraddire il business plan che ci sta dietro.</p>
-<p class="sub">Versione 4.3, 13 skill. Aggiornato al 07.10.2026.</p>
-<h2>Cos&rsquo;&egrave; una skill</h2>
-<p>Una skill è un foglio di istruzioni scritto che dice a Claude come facciamo noi una certa cosa: cosa leggere prima, cosa deve contenere il risultato, cosa è vietato, cosa controllare prima di consegnare.</p>
-<p>È un documento, non software. Dentro il plugin ogni skill ha il suo SKILL.md e si legge.</p>
-<p>Senza la skill ottieni una risposta plausibile. Con la skill ottieni la nostra risposta, uguale ogni volta.</p>
-<div class="box"><p>Chiedi in linguaggio normale, in italiano. Claude riconosce da solo quale skill serve e te lo dice. Non ci sono comandi da imparare e non serve ricordare i nomi qui sotto.</p></div>
-<h2>Le skill del lato capitale</h2>
+<main>
+<h1>Real Estate OS</h1>
+<p class="lead" data-en="Thirteen skills for the recurring work of a real estate development">Tredici skill per il lavoro ricorrente di un'operazione immobiliare</p>
+<a class="go1" href="#installa"><span class="tx"><span class="k">Inizia da qui</span><b>Installa il plugin · 3 minuti, una volta sola</b></span><span class="ar">&rarr;</span></a>
+<div class="blk">
+<p class="lab" data-en="What changes in the daily work">Cosa cambia nel lavoro di tutti i giorni</p>
+<p class="sub" data-en="Four examples. The other nine sit inside each skill's panel.">Quattro esempi. Gli altri nove sono dentro la scheda di ciascuna skill.</p>
+<table class="ba"><thead><tr><th>Skill</th><th><span data-en="Today">Oggi</span></th><th class="th-d"><span data-en="With the skill">Con la skill</span></th></tr></thead><tbody>
+<tr><td class="k"><a class="go" href="#project-setup">project-setup</a></td><td class="p" data-en="Files sit in three folders and two chats, and only whoever typed it knows which figure is right.">I file stanno in tre cartelle e due chat, e la cifra giusta la sa solo chi l'ha scritta.</td><td class="d" data-en="One folder, every number with its source and date, and a gap list with a name beside each item.">Una cartella, ogni numero con fonte e data, e l'elenco di cosa manca con un nome accanto.</td></tr>
+<tr><td class="k"><a class="go" href="#deal-validator">deal-validator</a></td><td class="p" data-en="The recipient finds the error.">L'errore lo trova il destinatario.</td><td class="d" data-en="You find it, with the cell reference, before hitting send.">Lo trovi tu, con il riferimento di cella, prima di premere invia.</td></tr>
+<tr><td class="k"><a class="go" href="#investor-teaser">investor-teaser</a></td><td class="p" data-en="Every round the client corrects the same fact, because nobody asked them.">Ogni giro il cliente corregge lo stesso dato, perché nessuno glielo ha chiesto.</td><td class="d" data-en="The questions get asked once, up front, and the document stops contradicting itself.">Le domande si fanno prima, una volta, e il documento non si contraddice da solo.</td></tr>
+<tr><td class="k"><a class="go" href="#sales-brochure">sales-brochure</a></td><td class="p" data-en="Every brochure starts from scratch and is reprinted whole when a unit sells.">Ogni brochure riparte da zero e si ristampa tutta quando un'unità si vende.</td><td class="d" data-en="Evergreen body plus a dated insert: when a unit sells you reprint the sheet.">Corpo evergreen più inserto datato: quando un'unità si vende si ristampa il foglio.</td></tr>
+</tbody></table></div>
+<div class="blk">
+<p class="lab" data-en="The thirteen skills">Le tredici skill</p>
+<p class="sub" data-en="Open a card for the detail: what it does, what it needs, what it gives, what it does not do.">Apri una scheda per il dettaglio: cosa fa, cosa serve, cosa produce, cosa non fa.</p>
+<div class="tools"><input id="f" type="search" placeholder="Filtra le skill…" data-en-ph="Filter the skills…" aria-label="Filtra le skill…"><div class="rbs"><button type="button" class="rb on" data-r=""><span data-en="All">Tutte</span></button><button type="button" class="rb" data-r="founder"><span data-en="Founder">Founder</span></button><button type="button" class="rb" data-r="finance"><span data-en="Finance">Finance</span></button><button type="button" class="rb" data-r="arch"><span data-en="Architect">Architetto</span></button><button type="button" class="rb" data-r="mkt"><span data-en="Marketing">Marketing</span></button><button type="button" class="rb" data-r="legal"><span data-en="Legal">Legale</span></button></div><span class="cnt" id="cnt"></span></div>
 <div class="cards">
-<div class="card"><span class="nm"><a href="project-setup.html">project-setup</a></span><p>La porta d'ingresso: da un mucchio di file a una cartella ordinata e a un brief con le cifre</p></div>
-<div class="card"><span class="nm"><a href="business-plan.html">business-plan</a></span><p>Il modello finanziario dell'operazione e il factsheet che ne esce</p></div>
-<div class="card"><span class="nm"><a href="architect-data-interpreter.html">architect-data-interpreter</a></span><p>Legge i disegni dell'architetto e dice anche quanto potenziale resta inutilizzato</p></div>
-<div class="card"><span class="nm"><a href="market-research.html">market-research</a></span><p>I prezzi del modello stanno in piedi, e chi legge può verificarlo da solo</p></div>
-<div class="card"><span class="nm"><a href="deal-validator.html">deal-validator</a></span><p>Due modi: giudica un'operazione, oppure ci audita i documenti prima che partano</p></div>
-<div class="card"><span class="nm"><a href="dd-dataroom.html">dd-dataroom</a></span><p>La data room, i buchi, le domande dell'investitore e le risposte già redatte</p></div>
-<div class="card"><span class="nm"><a href="investor-teaser.html">investor-teaser</a></span><p>Il documento che si manda a un investitore, e che regge a una lettura seria</p></div>
-<div class="card"><span class="nm"><a href="foreign-investment-compliance.html">foreign-investment-compliance</a></span><p>Questo investitore può legalmente entrare in questo immobile, in questo paese, in questa forma</p></div>
-<div class="card"><span class="nm"><a href="capital-structuring.html">capital-structuring</a></span><p>Dato che si può, cosa costruiamo: veicolo, strumento, flusso del denaro, waterfall, governance</p></div>
-<div class="card"><span class="nm"><a href="tokenization-setup.html">tokenization-setup</a></span><p>Questa operazione va tokenizzata, e se sì: cosa, con quale involucro, a chi, fino all'uscita</p></div>
-<div class="card"><span class="nm"><a href="portfolio-ops.html">portfolio-ops</a></span><p>Costruisce, aggiorna e verifica il portfolio e il track record, e la pagina che si manda agli investitori</p></div>
+<details class="card" id="project-setup" data-all="project-setup La porta d'ingresso: da un mucchio di file a una cartella ordinata e a un brief con le cifre The front door: from a pile of files to an ordered folder and a brief with the figures Il materiale arriva disordinato: render, piante, un listino, numeri in un messaggio. Costruisce la cartella standard, classifica ogni file ed estrae le cifre in un brief. Material arrives unsorted: renders, plans, a price list, numbers in a message. It builds the standard folder, classifies every file and extracts the figures into a brief. organizzami questo progetto organize this project for me Founder Architetto Founder Architect" data-roles="founder arch">
+<summary>
+<span class="n">01</span>
+<small>project-setup</small>
+<b class="t" data-en="The front door: from a pile of files to an ordered folder and a brief with the figures">La porta d'ingresso: da un mucchio di file a una cartella ordinata e a un brief con le cifre</b>
+<div class="chips"><span class="chip"><span data-en="Founder">Founder</span></span><span class="chip"><span data-en="Architect">Architetto</span></span></div>
+<span class="open"><span data-en="Open">Apri</span> &rarr;</span>
+</summary>
+<div class="body">
+<div class="row"><h3><span data-en="What changes in the daily work">Cosa cambia nel lavoro di tutti i giorni</span></h3><div><table class="ba one"><thead><tr><th><span data-en="Today">Oggi</span></th><th class="th-d"><span data-en="With the skill">Con la skill</span></th></tr></thead><tbody><tr><td class="p" data-en="Files sit in three folders and two chats, and only whoever typed it knows which figure is right.">I file stanno in tre cartelle e due chat, e la cifra giusta la sa solo chi l'ha scritta.</td><td class="d" data-en="One folder, every number with its source and date, and a gap list with a name beside each item.">Una cartella, ogni numero con fonte e data, e l'elenco di cosa manca con un nome accanto.</td></tr></tbody></table></div></div>
+<div class="row"><h3><span data-en="What it does">Cosa fa</span></h3><div><p class="cf" data-en="Material arrives unsorted: renders, plans, a price list, numbers in a message. It builds the standard folder, classifies every file and extracts the figures into a brief.">Il materiale arriva disordinato: render, piante, un listino, numeri in un messaggio. Costruisce la cartella standard, classifica ogni file ed estrae le cifre in un brief.</p><ul class="pt"><li data-en="Every figure records where it came from and when">Ogni cifra registra da dove viene e di quando è</li><li data-en="What is missing becomes a row with a name beside it">Quello che manca diventa una riga con un nome accanto</li><li data-en="Everything downstream reads that brief, not the original files">Tutto il resto legge quel brief, non i file originali</li></ul></div></div>
+<div class="row"><h3><span data-en="Needs and gives">Serve e produce</span></h3><div><div class="io"><div><span class="mini"><span data-en="Needs">Serve</span></span><ul><li data-en="Project material in any order: renders, plans, price lists, cost tables, messages">Materiale di progetto in qualsiasi ordine: render, piante, listini, tabelle costi, messaggi</li></ul></div><div><span class="mini"><span data-en="Gives">Produce</span></span><ul><li data-en="Project folder tree">Albero cartelle di progetto</li><li data-en="Brief with source and date per figure">Brief con fonte e data per ogni cifra</li><li data-en="List of what is missing, with an owner each">Elenco di cosa manca, con un responsabile per voce</li></ul></div></div></div></div>
+<div class="row"><h3><span data-en="Example request">Esempio di richiesta</span></h3><div><p class="ask">&ldquo;<span data-en="organize this project for me">organizzami questo progetto</span>&rdquo;</p></div></div>
+<div class="row"><h3><span data-en="Limits">Limiti</span></h3><div><p data-en="It does not organise documents for an investor's due diligence: that is dd-dataroom.">Non organizza i documenti per la due diligence di un investitore: quello è dd-dataroom.</p><div class="chain sm">
+<span class="step on"><span data-en="Intake">Intake</span></span>
+<span class="arw">&rarr;</span>
+<span class="step"><span data-en="Economics">Economics</span></span>
+<a class="step go" href="#architect-data-interpreter">architect-data-interpreter</a>
+</div></div></div>
+</div></details>
+<details class="card" id="business-plan" data-all="business-plan Il modello finanziario dell'operazione e il factsheet che ne esce The deal's financial model and the factsheet it produces Costruisce il modello completo dell'operazione: costi, vendite, cassa, debito, imposte, waterfall, KPI e sensibilità. Builds the full deal model: costs, sales, cash, debt, tax, waterfall, KPIs and sensitivity. fammi il business plan di questa operazione build the business plan for this deal Finance Founder Finance Founder" data-roles="finance founder">
+<summary>
+<span class="n">02</span>
+<small>business-plan</small>
+<b class="t" data-en="The deal's financial model and the factsheet it produces">Il modello finanziario dell'operazione e il factsheet che ne esce</b>
+<div class="chips"><span class="chip"><span data-en="Finance">Finance</span></span><span class="chip"><span data-en="Founder">Founder</span></span></div>
+<span class="open"><span data-en="Open">Apri</span> &rarr;</span>
+</summary>
+<div class="body">
+<div class="row"><h3><span data-en="What changes in the daily work">Cosa cambia nel lavoro di tutti i giorni</span></h3><div><table class="ba one"><thead><tr><th><span data-en="Today">Oggi</span></th><th class="th-d"><span data-en="With the skill">Con la skill</span></th></tr></thead><tbody><tr><td class="p" data-en="Every deal has a different spreadsheet, and comparing two is not possible.">Ogni operazione ha un Excel diverso, e confrontarne due non si può.</td><td class="d" data-en="The same structure every time, open formulas, and the blocking questions asked before anything is sent.">La stessa struttura ogni volta, formule aperte, e le domande che bloccano poste prima dell'invio.</td></tr></tbody></table></div></div>
+<div class="row"><h3><span data-en="What it does">Cosa fa</span></h3><div><p class="cf" data-en="Builds the full deal model: costs, sales, cash, debt, tax, waterfall, KPIs and sensitivity.">Costruisce il modello completo dell'operazione: costi, vendite, cassa, debito, imposte, waterfall, KPI e sensibilità.</p><ul class="pt"><li data-en="Open formulas pointing at input cells, never numbers typed inside">Formule aperte che puntano alle celle di input, mai numeri scritti dentro</li><li data-en="Four blocking questions before any investor-facing document">Quattro domande bloccanti prima di qualsiasi documento per investitori</li><li data-en="Unanswered, it ships stamped as a draft not for circulation">Senza risposta esce marcato bozza non diffondibile</li></ul></div></div>
+<div class="row"><h3><span data-en="Needs and gives">Serve e produce</span></h3><div><div class="io"><div><span class="mini"><span data-en="Needs">Serve</span></span><ul><li data-en="The project brief: areas, costs, prices">Il brief di progetto: superfici, costi, prezzi</li><li data-en="Construction and sales timing">Tempi di cantiere e di vendita</li><li data-en="The four mandatory intake answers">Le quattro risposte obbligatorie di intake</li></ul></div><div><span class="mini"><span data-en="Gives">Produce</span></span><ul><li data-en="Excel with live formulas">Excel con formule attive</li><li data-en="Factsheet">Factsheet</li><li data-en="Interactive HTML or PDF">HTML interattivo o PDF</li></ul></div></div></div></div>
+<div class="row"><h3><span data-en="Example request">Esempio di richiesta</span></h3><div><p class="ask">&ldquo;<span data-en="build the business plan for this deal">fammi il business plan di questa operazione</span>&rdquo;</p></div></div>
+<div class="row"><h3><span data-en="Limits">Limiti</span></h3><div><p data-en="It builds. It does not judge whether the deal is good: that is deal-validator.">Costruisce. Non giudica se l'operazione è buona: quello è deal-validator.</p><div class="chain sm">
+<span class="step"><span data-en="Intake">Intake</span></span>
+<span class="arw">&rarr;</span>
+<span class="step on"><span data-en="Economics">Economics</span></span>
+<span class="arw">&rarr;</span>
+<span class="step"><span data-en="Compliance">Compliance</span></span>
+<a class="step go" href="#market-research">market-research</a>
+<a class="step go" href="#deal-validator">deal-validator</a>
+</div></div></div>
+</div></details>
+<details class="card" id="architect-data-interpreter" data-all="architect-data-interpreter Legge i disegni dell'architetto e dice anche quanto potenziale resta inutilizzato Reads the architect's drawings, and says how much buildable potential is left unused Estrae unità, superfici e volumi dai disegni nella forma che serve al modello. Poi verifica quanto del potenziale edificatorio il progetto sta davvero usando. Extracts units, areas and volumes from the drawings in the shape the model needs. Then checks how much of the buildable potential the scheme is actually using. estrai le superfici da queste piante extract the areas from these plans Architetto Finance Architect Finance" data-roles="arch finance">
+<summary>
+<span class="n">03</span>
+<small>architect-data-interpreter</small>
+<b class="t" data-en="Reads the architect's drawings, and says how much buildable potential is left unused">Legge i disegni dell'architetto e dice anche quanto potenziale resta inutilizzato</b>
+<div class="chips"><span class="chip"><span data-en="Architect">Architetto</span></span><span class="chip"><span data-en="Finance">Finance</span></span></div>
+<span class="open"><span data-en="Open">Apri</span> &rarr;</span>
+</summary>
+<div class="body">
+<div class="row"><h3><span data-en="What changes in the daily work">Cosa cambia nel lavoro di tutti i giorni</span></h3><div><table class="ba one"><thead><tr><th><span data-en="Today">Oggi</span></th><th class="th-d"><span data-en="With the skill">Con la skill</span></th></tr></thead><tbody><tr><td class="p" data-en="Areas get retyped by hand, and the error surfaces inside the model.">Le superfici si ribattono a mano, e l'errore si scopre nel modello.</td><td class="d" data-en="They are read off the drawings, reconciled with the architect's table, and what is left unused carries a price.">Si leggono dai disegni, si riconciliano con la tabella dell'architetto, e ciò che resta inutilizzato ha un prezzo.</td></tr></tbody></table></div></div>
+<div class="row"><h3><span data-en="What it does">Cosa fa</span></h3><div><p class="cf" data-en="Extracts units, areas and volumes from the drawings in the shape the model needs. Then checks how much of the buildable potential the scheme is actually using.">Estrae unità, superfici e volumi dai disegni nella forma che serve al modello. Poi verifica quanto del potenziale edificatorio il progetto sta davvero usando.</p><ul class="pt"><li data-en="Reconciles with the architect's table and flags the differences">Riconcilia con la tabella dell'architetto e segnala le differenze</li><li data-en="Unused potential is stated in money, not in square metres">Il potenziale inutilizzato è espresso in denaro, non in metri quadri</li><li data-en="Closes with the exact questions to put to the architect">Chiude con le domande precise da porre all'architetto</li></ul></div></div>
+<div class="row"><h3><span data-en="Needs and gives">Serve e produce</span></h3><div><div class="io"><div><span class="mini"><span data-en="Needs">Serve</span></span><ul><li data-en="Plans, sections, elevations, area table, as PDF">Piante, sezioni, prospetti, tabella superfici, in PDF</li><li data-en="The zoning data for the plot">I dati di piano della zona</li></ul></div><div><span class="mini"><span data-en="Gives">Produce</span></span><ul><li data-en="Units, areas and volumes table ready for the model">Tabella unità, superfici e volumi pronta per il modello</li><li data-en="Optimisation note with the unused potential priced">Nota di ottimizzazione con il potenziale inutilizzato quantificato</li><li data-en="The questions to put to the architect">Le domande da porre all'architetto</li></ul></div></div></div></div>
+<div class="row"><h3><span data-en="Example request">Esempio di richiesta</span></h3><div><p class="ask">&ldquo;<span data-en="extract the areas from these plans">estrai le superfici da queste piante</span>&rdquo;</p></div></div>
+<div class="row"><h3><span data-en="Limits">Limiti</span></h3><div><p data-en="It does not design and does not decide: it quantifies and frames the questions. Feasibility is the architect's call.">Non progetta e non decide: quantifica e formula le domande. La fattibilità la giudica l'architetto.</p><div class="chain sm">
+<span class="step on"><span data-en="Intake">Intake</span></span>
+<span class="arw">&rarr;</span>
+<span class="step"><span data-en="Economics">Economics</span></span>
+<a class="step go" href="#project-setup">project-setup</a>
+</div></div></div>
+</div></details>
+<details class="card" id="market-research" data-all="market-research I prezzi del modello stanno in piedi, e chi legge può verificarlo da solo Do the model's prices hold, and can the reader check it themselves Verifica se i prezzi del modello reggono, nella forma che serve a un documento da data room: tre pagine al massimo. Checks whether the model's prices hold, in the form a data-room document needs: three pages maximum. questi prezzi stanno in piedi? do these prices hold up? Finance Founder Marketing Finance Founder Marketing" data-roles="finance founder mkt">
+<summary>
+<span class="n">04</span>
+<small>market-research</small>
+<b class="t" data-en="Do the model's prices hold, and can the reader check it themselves">I prezzi del modello stanno in piedi, e chi legge può verificarlo da solo</b>
+<div class="chips"><span class="chip"><span data-en="Finance">Finance</span></span><span class="chip"><span data-en="Founder">Founder</span></span><span class="chip"><span data-en="Marketing">Marketing</span></span></div>
+<span class="open"><span data-en="Open">Apri</span> &rarr;</span>
+</summary>
+<div class="body">
+<div class="row"><h3><span data-en="What changes in the daily work">Cosa cambia nel lavoro di tutti i giorni</span></h3><div><table class="ba one"><thead><tr><th><span data-en="Today">Oggi</span></th><th class="th-d"><span data-en="With the skill">Con la skill</span></th></tr></thead><tbody><tr><td class="p" data-en="Prices are the ones that feel right, and the investor gets an answer from memory.">I prezzi sono quelli che ci sembrano giusti, e all'investitore si risponde a memoria.</td><td class="d" data-en="Three sources of different nature, a code beside every figure, and re-verification in six months is mechanical.">Tre fonti di natura diversa, un codice accanto a ogni cifra, e la riverifica a sei mesi è meccanica.</td></tr></tbody></table></div></div>
+<div class="row"><h3><span data-en="What it does">Cosa fa</span></h3><div><p class="cf" data-en="Checks whether the model's prices hold, in the form a data-room document needs: three pages maximum.">Verifica se i prezzi del modello reggono, nella forma che serve a un documento da data room: tre pagine al massimo.</p><ul class="pt"><li data-en="At least three sources of different nature: one alone cannot be verified">Almeno tre fonti di natura diversa: una sola non è verificabile</li><li data-en="A code beside every figure, and two dates: of the data and of consultation">Un codice accanto a ogni cifra, e due date: del dato e della consultazione</li><li data-en="A register that makes re-verification in six months mechanical">Un registro che rende meccanica la riverifica a sei mesi</li></ul></div></div>
+<div class="row"><h3><span data-en="Needs and gives">Serve e produce</span></h3><div><div class="io"><div><span class="mini"><span data-en="Needs">Serve</span></span><ul><li data-en="Location, product, the price grid to test">Zona, prodotto, griglia prezzi da verificare</li></ul></div><div><span class="mini"><span data-en="Gives">Produce</span></span><ul><li data-en="Market analysis, three pages maximum, chart on page one">Analisi di mercato, massimo tre pagine, con il grafico in prima pagina</li><li data-en="Sources register, one row per reading, making re-verification mechanical">Registro fonti, una riga per lettura, che rende meccanica la riverifica</li><li data-en="Which sources to buy and which limit each one closes">Elenco delle fonti da acquistare e del limite che ciascuna chiude</li></ul></div></div></div></div>
+<div class="row"><h3><span data-en="Example request">Esempio di richiesta</span></h3><div><p class="ask">&ldquo;<span data-en="do these prices hold up?">questi prezzi stanno in piedi?</span>&rdquo;</p></div></div>
+<div class="row"><h3><span data-en="Limits">Limiti</span></h3><div><p data-en="It does not set the prices and does not judge the deal.">Non fissa i prezzi e non giudica l'operazione.</p><div class="chain sm">
+<span class="step"><span data-en="Intake">Intake</span></span>
+<span class="arw">&rarr;</span>
+<span class="step on"><span data-en="Economics">Economics</span></span>
+<span class="arw">&rarr;</span>
+<span class="step"><span data-en="Compliance">Compliance</span></span>
+<a class="step go" href="#business-plan">business-plan</a>
+<a class="step go" href="#deal-validator">deal-validator</a>
+</div></div></div>
+</div></details>
+<details class="card" id="deal-validator" data-all="deal-validator Due modi: giudica un'operazione, oppure ci audita i documenti prima che partano Two modes: judge a deal, or audit our own documents before they go out Due modi. Giudica un'operazione, nostra o di terzi. Oppure audita un nostro documento prima che parta. Two modes. It judges a deal, ours or a third party's. Or it audits one of our documents before it goes out. controlla questo documento prima che lo mandi check this document before I send it Finance Founder Finance Founder" data-roles="finance founder">
+<summary>
+<span class="n">05</span>
+<small>deal-validator</small>
+<b class="t" data-en="Two modes: judge a deal, or audit our own documents before they go out">Due modi: giudica un'operazione, oppure ci audita i documenti prima che partano</b>
+<div class="chips"><span class="chip"><span data-en="Finance">Finance</span></span><span class="chip"><span data-en="Founder">Founder</span></span></div>
+<span class="open"><span data-en="Open">Apri</span> &rarr;</span>
+</summary>
+<div class="body">
+<div class="row"><h3><span data-en="What changes in the daily work">Cosa cambia nel lavoro di tutti i giorni</span></h3><div><table class="ba one"><thead><tr><th><span data-en="Today">Oggi</span></th><th class="th-d"><span data-en="With the skill">Con la skill</span></th></tr></thead><tbody><tr><td class="p" data-en="The recipient finds the error.">L'errore lo trova il destinatario.</td><td class="d" data-en="You find it, with the cell reference, before hitting send.">Lo trovi tu, con il riferimento di cella, prima di premere invia.</td></tr></tbody></table></div></div>
+<div class="row"><h3><span data-en="What it does">Cosa fa</span></h3><div><p class="cf" data-en="Two modes. It judges a deal, ours or a third party's. Or it audits one of our documents before it goes out.">Due modi. Giudica un'operazione, nostra o di terzi. Oppure audita un nostro documento prima che parta.</p><ul class="pt"><li data-en="Recomputes instead of trusting, and points at the error with its cell">Ricalcola invece di fidarsi, e indica l'errore con la cella</li><li data-en="Returns a competent reader's objections, ranked by severity">Restituisce le obiezioni di un lettore competente, ordinate per gravità</li><li data-en="The verifier does not rewrite: it produces findings, not corrections">Chi verifica non riscrive: produce i rilievi, non le correzioni</li></ul></div></div>
+<div class="row"><h3><span data-en="Needs and gives">Serve e produce</span></h3><div><div class="io"><div><span class="mini"><span data-en="Needs">Serve</span></span><ul><li data-en="A model, a teaser, a portfolio, or a third party's business plan">Un modello, un teaser, un portfolio o un business plan di terzi</li></ul></div><div><span class="mini"><span data-en="Gives">Produce</span></span><ul><li data-en="Mode A: verdict, flaw list, cost benchmark, scenarios">Modo A: verdetto, elenco errori, confronto costi, scenari</li><li data-en="Mode B: objection list with severity and a send verdict">Modo B: lista di obiezioni con gravità e verdetto di invio</li></ul></div></div></div></div>
+<div class="row"><h3><span data-en="Example request">Esempio di richiesta</span></h3><div><p class="ask">&ldquo;<span data-en="check this document before I send it">controlla questo documento prima che lo mandi</span>&rdquo;</p></div></div>
+<div class="row"><h3><span data-en="Limits">Limiti</span></h3><div><p data-en="The verifier does not rewrite. It produces findings, not corrections.">Chi verifica non riscrive. Produce i rilievi, non le correzioni.</p><div class="chain sm">
+<span class="step"><span data-en="Intake">Intake</span></span>
+<span class="arw">&rarr;</span>
+<span class="step on"><span data-en="Economics">Economics</span></span>
+<span class="arw">&rarr;</span>
+<span class="step"><span data-en="Compliance">Compliance</span></span>
+<a class="step go" href="#market-research">market-research</a>
+<a class="step go" href="#business-plan">business-plan</a>
+</div></div></div>
+</div></details>
+<details class="card" id="dd-dataroom" data-all="dd-dataroom La data room, i buchi, le domande dell'investitore e le risposte già redatte The data room, the gaps, the investor's questions and the answers already drafted Costruisce la data room, classifica i documenti e mappa ogni domanda dell'investitore sulla checklist, redigendo le risposte con il documento citato. Builds the data room, classifies the documents and maps every investor question onto the checklist, drafting answers that cite the document. rispondi a questa lista di domande dell'investitore answer this list of investor questions Finance Legale Founder Finance Legal Founder" data-roles="finance legal founder">
+<summary>
+<span class="n">06</span>
+<small>dd-dataroom</small>
+<b class="t" data-en="The data room, the gaps, the investor's questions and the answers already drafted">La data room, i buchi, le domande dell'investitore e le risposte già redatte</b>
+<div class="chips"><span class="chip"><span data-en="Finance">Finance</span></span><span class="chip"><span data-en="Legal">Legale</span></span><span class="chip"><span data-en="Founder">Founder</span></span></div>
+<span class="open"><span data-en="Open">Apri</span> &rarr;</span>
+</summary>
+<div class="body">
+<div class="row"><h3><span data-en="What changes in the daily work">Cosa cambia nel lavoro di tutti i giorni</span></h3><div><table class="ba one"><thead><tr><th><span data-en="Today">Oggi</span></th><th class="th-d"><span data-en="With the skill">Con la skill</span></th></tr></thead><tbody><tr><td class="p" data-en="Forty questions, answers scattered across five emails, and two of them disagree.">Quaranta domande, risposte sparse in cinque mail, e due si contraddicono.</td><td class="d" data-en="One tracker, one answer per question citing its document, and the gaps declared instead of hidden.">Un tracker, una risposta per domanda con il documento citato, e i buchi dichiarati invece che taciuti.</td></tr></tbody></table></div></div>
+<div class="row"><h3><span data-en="What it does">Cosa fa</span></h3><div><p class="cf" data-en="Builds the data room, classifies the documents and maps every investor question onto the checklist, drafting answers that cite the document.">Costruisce la data room, classifica i documenti e mappa ogni domanda dell'investitore sulla checklist, redigendo le risposte con il documento citato.</p><ul class="pt"><li data-en="A gap is a row with an owner and a date, not a silence">Un buco è una riga con responsabile e data, non un silenzio</li><li data-en="The FAQ is the question register, published: not a new document">La FAQ è il registro delle domande, pubblicato: non un documento nuovo</li><li data-en="Blocks if an answer contradicts the teaser">Blocca se una risposta contraddice il teaser</li></ul></div></div>
+<div class="row"><h3><span data-en="Needs and gives">Serve e produce</span></h3><div><div class="io"><div><span class="mini"><span data-en="Needs">Serve</span></span><ul><li data-en="The investor's or bank's questions">Le domande dell'investitore o della banca</li><li data-en="The existing project documents">I documenti di progetto esistenti</li></ul></div><div><span class="mini"><span data-en="Gives">Produce</span></span><ul><li data-en="Data-room structure, documents classified">Struttura della data room, documenti classificati</li><li data-en="Gap analysis with owner and date">Gap analysis con responsabile e data</li><li data-en="Question tracker and drafted answers">Tracker domande e risposte redatte</li><li data-en="FAQ">FAQ</li></ul></div></div></div></div>
+<div class="row"><h3><span data-en="Example request">Esempio di richiesta</span></h3><div><p class="ask">&ldquo;<span data-en="answer this list of investor questions">rispondi a questa lista di domande dell'investitore</span>&rdquo;</p></div></div>
+<div class="row"><h3><span data-en="Limits">Limiti</span></h3><div><p data-en="It does not produce the model or the teaser the investor asks for: it calls them.">Non produce il modello né il teaser che l'investitore chiede: li chiama.</p><div class="chain sm">
+<span class="step"><span data-en="Structure">Struttura</span></span>
+<span class="arw">&rarr;</span>
+<span class="step on"><span data-en="Investors">Investitori</span></span>
+<span class="arw">&rarr;</span>
+<span class="step"><span data-en="Sales">Vendita</span></span>
+<a class="step go" href="#investor-teaser">investor-teaser</a>
+<a class="step go" href="#portfolio-ops">portfolio-ops</a>
+</div></div></div>
+</div></details>
+<details class="card" id="investor-teaser" data-all="investor-teaser Il documento che si manda a un investitore, e che regge a una lettura seria The document you send an investor, built to survive a serious read Trasforma il modello in qualcosa che si può spedire: pagina interattiva, memo PDF impaginato oppure slide. Turns the model into something you can send: an interactive page, a designed PDF memo, or slides. fammi il teaser di questa operazione make the teaser for this deal Founder Finance Founder Finance" data-roles="founder finance">
+<summary>
+<span class="n">07</span>
+<small>investor-teaser</small>
+<b class="t" data-en="The document you send an investor, built to survive a serious read">Il documento che si manda a un investitore, e che regge a una lettura seria</b>
+<div class="chips"><span class="chip"><span data-en="Founder">Founder</span></span><span class="chip"><span data-en="Finance">Finance</span></span></div>
+<span class="open"><span data-en="Open">Apri</span> &rarr;</span>
+</summary>
+<div class="body">
+<div class="row"><h3><span data-en="What changes in the daily work">Cosa cambia nel lavoro di tutti i giorni</span></h3><div><table class="ba one"><thead><tr><th><span data-en="Today">Oggi</span></th><th class="th-d"><span data-en="With the skill">Con la skill</span></th></tr></thead><tbody><tr><td class="p" data-en="Every round the client corrects the same fact, because nobody asked them.">Ogni giro il cliente corregge lo stesso dato, perché nessuno glielo ha chiesto.</td><td class="d" data-en="The questions get asked once, up front, and the document stops contradicting itself.">Le domande si fanno prima, una volta, e il documento non si contraddice da solo.</td></tr></tbody></table></div></div>
+<div class="row"><h3><span data-en="What it does">Cosa fa</span></h3><div><p class="cf" data-en="Turns the model into something you can send: an interactive page, a designed PDF memo, or slides.">Trasforma il modello in qualcosa che si può spedire: pagina interattiva, memo PDF impaginato oppure slide.</p><ul class="pt"><li data-en="Every number comes from the model; if it is missing it stays a placeholder">Ogni numero viene dal modello; se manca resta un segnaposto</li><li data-en="The intake questions are asked up front, in one block, once">Le domande di intake si fanno prima, in blocco, una volta sola</li><li data-en="Every non-numeric claim carries source, channel and expiry">Ogni affermazione non numerica ha fonte, canale e scadenza</li></ul></div></div>
+<div class="row"><h3><span data-en="Needs and gives">Serve e produce</span></h3><div><div class="io"><div><span class="mini"><span data-en="Needs">Serve</span></span><ul><li data-en="The financial model">Il modello finanziario</li><li data-en="The intake answers">Le risposte di intake</li><li data-en="The market annex, where needed">L'allegato di mercato, dove serve</li></ul></div><div><span class="mini"><span data-en="Gives">Produce</span></span><ul><li data-en="Interactive HTML page">Pagina HTML interattiva</li><li data-en="Designed PDF investment memo">Memo di investimento in PDF impaginato</li><li data-en="Slides">Slide</li></ul></div></div></div></div>
+<div class="row"><h3><span data-en="Example request">Esempio di richiesta</span></h3><div><p class="ask">&ldquo;<span data-en="make the teaser for this deal">fammi il teaser di questa operazione</span>&rdquo;</p></div></div>
+<div class="row"><h3><span data-en="Limits">Limiti</span></h3><div><p data-en="It originates no numbers. If the model does not have it, the teaser does not invent it.">Non origina numeri. Se il modello non ce l'ha, il teaser non lo inventa.</p><div class="chain sm">
+<span class="step"><span data-en="Structure">Struttura</span></span>
+<span class="arw">&rarr;</span>
+<span class="step on"><span data-en="Investors">Investitori</span></span>
+<span class="arw">&rarr;</span>
+<span class="step"><span data-en="Sales">Vendita</span></span>
+<a class="step go" href="#dd-dataroom">dd-dataroom</a>
+<a class="step go" href="#portfolio-ops">portfolio-ops</a>
+</div></div></div>
+</div></details>
+<details class="card" id="foreign-investment-compliance" data-all="foreign-investment-compliance Questo investitore può legalmente entrare in questo immobile, in questo paese, in questa forma May this investor legally invest in this asset, in this country, in this form Risponde alla domanda che apre il cancello: questo investitore può entrare, in questo paese, in questa forma. Motore in cinque passi più i moduli per paese. Answers the question that opens the gate: may this investor come in, in this country, in this form. A five-step engine plus per-country modules. un investitore estero può entrare in questa operazione? can a foreign investor join this deal? Legale Founder Legal Founder" data-roles="legal founder">
+<summary>
+<span class="n">08</span>
+<small>foreign-investment-compliance</small>
+<b class="t" data-en="May this investor legally invest in this asset, in this country, in this form">Questo investitore può legalmente entrare in questo immobile, in questo paese, in questa forma</b>
+<div class="chips"><span class="chip"><span data-en="Legal">Legale</span></span><span class="chip"><span data-en="Founder">Founder</span></span></div>
+<span class="open"><span data-en="Open">Apri</span> &rarr;</span>
+</summary>
+<div class="body">
+<div class="row"><h3><span data-en="What changes in the daily work">Cosa cambia nel lavoro di tutti i giorni</span></h3><div><table class="ba one"><thead><tr><th><span data-en="Today">Oggi</span></th><th class="th-d"><span data-en="With the skill">Con la skill</span></th></tr></thead><tbody><tr><td class="p" data-en="You ask counsel and wait, or you decide on instinct.">Si chiede al legale e si aspetta, oppure si decide a intuito.</td><td class="d" data-en="Verdict and limit same day, off official sources, with the questions ready for counsel.">Verdetto e limite in giornata, sulle fonti ufficiali, con le domande pronte per il legale.</td></tr></tbody></table></div></div>
+<div class="row"><h3><span data-en="What it does">Cosa fa</span></h3><div><p class="cf" data-en="Answers the question that opens the gate: may this investor come in, in this country, in this form. A five-step engine plus per-country modules.">Risponde alla domanda che apre il cancello: questo investitore può entrare, in questo paese, in questa forma. Motore in cinque passi più i moduli per paese.</p><ul class="pt"><li data-en="Rules are re-verified against official sources at each use, never from memory">Le norme si riverificano sulle fonti ufficiali a ogni uso, mai a memoria</li><li data-en="Looks both ways: the asset's country and the investor's">Guarda in entrambe le direzioni: paese dell'immobile e paese dell'investitore</li><li data-en="Includes KYC and beneficial ownership">Include KYC e titolarità effettiva</li></ul></div></div>
+<div class="row"><h3><span data-en="Needs and gives">Serve e produce</span></h3><div><div class="io"><div><span class="mini"><span data-en="Needs">Serve</span></span><ul><li data-en="The investor's origin and nature">Origine e natura dell'investitore</li><li data-en="The asset's country">Paese dell'immobile</li><li data-en="The intended form of the investment">Forma prevista dell'investimento</li></ul></div><div><span class="mini"><span data-en="Gives">Produce</span></span><ul><li data-en="A verdict with its conditions">Verdetto con le sue condizioni</li><li data-en="The limit and the capital-stack calculation">Il limite e il calcolo della struttura del capitale</li><li data-en="A memo, interactive HTML if wanted">Memo, anche in HTML interattivo</li><li data-en="A KYC status row per investor">Stato KYC per investitore</li></ul></div></div></div></div>
+<div class="row"><h3><span data-en="Example request">Esempio di richiesta</span></h3><div><p class="ask">&ldquo;<span data-en="can a foreign investor join this deal?">un investitore estero può entrare in questa operazione?</span>&rdquo;</p></div></div>
+<div class="row"><h3><span data-en="Limits">Limiti</span></h3><div><p data-en="It does not design the vehicle: that is capital-structuring. It is not legal advice and does not replace an opinion.">Non disegna il veicolo: quello è capital-structuring. Non è consulenza legale e non sostituisce un parere.</p><div class="chain sm">
+<span class="step"><span data-en="Economics">Economics</span></span>
+<span class="arw">&rarr;</span>
+<span class="step on"><span data-en="Compliance">Compliance</span></span>
+<span class="arw">&rarr;</span>
+<span class="step"><span data-en="Structure">Struttura</span></span>
+</div></div></div>
+</div></details>
+<details class="card" id="capital-structuring" data-all="capital-structuring Dato che si può, cosa costruiamo: veicolo, strumento, flusso del denaro, waterfall, governance Given that it is allowed, what we build: vehicle, instrument, money flow, waterfall, governance Dato che si può, decide cosa costruire: strumento, veicolo, giurisdizione, flusso del denaro, waterfall e governance. Given that it is allowed, decides what to build: instrument, vehicle, jurisdiction, money flow, waterfall and governance. come strutturiamo l'ingresso di questo investitore? how do we structure this investor coming in? Founder Legale Finance Founder Legal Finance" data-roles="founder legal finance">
+<summary>
+<span class="n">09</span>
+<small>capital-structuring</small>
+<b class="t" data-en="Given that it is allowed, what we build: vehicle, instrument, money flow, waterfall, governance">Dato che si può, cosa costruiamo: veicolo, strumento, flusso del denaro, waterfall, governance</b>
+<div class="chips"><span class="chip"><span data-en="Founder">Founder</span></span><span class="chip"><span data-en="Legal">Legale</span></span><span class="chip"><span data-en="Finance">Finance</span></span></div>
+<span class="open"><span data-en="Open">Apri</span> &rarr;</span>
+</summary>
+<div class="body">
+<div class="row"><h3><span data-en="What changes in the daily work">Cosa cambia nel lavoro di tutti i giorni</span></h3><div><table class="ba one"><thead><tr><th><span data-en="Today">Oggi</span></th><th class="th-d"><span data-en="With the skill">Con la skill</span></th></tr></thead><tbody><tr><td class="p" data-en="The structure gets copied from the last deal.">La struttura si copia dall'ultima operazione.</td><td class="d" data-en="Vehicle and instrument chosen with the wrapper's cost set against the capital raised.">Veicolo e strumento scelti con il costo del wrapper messo contro il capitale raccolto.</td></tr></tbody></table></div></div>
+<div class="row"><h3><span data-en="What it does">Cosa fa</span></h3><div><p class="cf" data-en="Given that it is allowed, decides what to build: instrument, vehicle, jurisdiction, money flow, waterfall and governance.">Dato che si può, decide cosa costruire: strumento, veicolo, giurisdizione, flusso del denaro, waterfall e governance.</p><ul class="pt"><li data-en="The wrapper must pay for itself: cost and time against the capital raised">Il wrapper deve ripagarsi: costo e tempi contro il capitale raccolto</li><li data-en="Every hop of the money checked for tax and banking friction">Ogni passaggio del denaro verificato su fisco e banca</li><li data-en="Never a structure whose only purpose is to get around a restriction">Mai una struttura il cui unico scopo è aggirare una restrizione</li></ul></div></div>
+<div class="row"><h3><span data-en="Needs and gives">Serve e produce</span></h3><div><div class="io"><div><span class="mini"><span data-en="Needs">Serve</span></span><ul><li data-en="The compliance verdict">Il verdetto di compliance</li><li data-en="Investor profile and business model">Profilo dell'investitore e modello di business</li><li data-en="The deal economics">Le economie dell'operazione</li></ul></div><div><span class="mini"><span data-en="Gives">Produce</span></span><ul><li data-en="A structure recommendation with the rejected alternatives and why">Raccomandazione di struttura con le alternative scartate e il perché</li><li data-en="Diagram of entities, holdings, instruments and money flow">Schema di entità, quote, strumenti e flusso del denaro</li><li data-en="Implementation checklist with owner and date">Checklist di attuazione con responsabile e data</li><li data-en="Comparison matrix when more than one structure holds">Matrice di confronto quando più strutture reggono</li></ul></div></div></div></div>
+<div class="row"><h3><span data-en="Example request">Esempio di richiesta</span></h3><div><p class="ask">&ldquo;<span data-en="how do we structure this investor coming in?">come strutturiamo l'ingresso di questo investitore?</span>&rdquo;</p></div></div>
+<div class="row"><h3><span data-en="Limits">Limiti</span></h3><div><p data-en="Tax is a separate opinion: it flags the issues, it does not conclude on them.">Il fisco è un parere separato: segnala i temi, non conclude.</p><div class="chain sm">
+<span class="step"><span data-en="Compliance">Compliance</span></span>
+<span class="arw">&rarr;</span>
+<span class="step on"><span data-en="Structure">Struttura</span></span>
+<span class="arw">&rarr;</span>
+<span class="step"><span data-en="Investors">Investitori</span></span>
+<a class="step go" href="#tokenization-setup">tokenization-setup</a>
+</div></div></div>
+</div></details>
+<details class="card" id="tokenization-setup" data-all="tokenization-setup Questa operazione va tokenizzata, e se sì: cosa, con quale involucro, a chi, fino all'uscita Should this be tokenized, and if so: what, in which wrapper, to whom, all the way to exit Decide se tokenizzare ha senso, e se sì imposta tutto fino all'uscita: involucro, raccolta, distribuzione, custodia, ciclo di vita. Decides whether tokenizing makes sense, and if so sets up everything through to exit: wrapper, raise, distribution, custody, lifecycle. vale la pena tokenizzare questa operazione? is it worth tokenizing this deal? Founder Legale Finance Founder Legal Finance" data-roles="founder legal finance">
+<summary>
+<span class="n">10</span>
+<small>tokenization-setup</small>
+<b class="t" data-en="Should this be tokenized, and if so: what, in which wrapper, to whom, all the way to exit">Questa operazione va tokenizzata, e se sì: cosa, con quale involucro, a chi, fino all'uscita</b>
+<div class="chips"><span class="chip"><span data-en="Founder">Founder</span></span><span class="chip"><span data-en="Legal">Legale</span></span><span class="chip"><span data-en="Finance">Finance</span></span></div>
+<span class="open"><span data-en="Open">Apri</span> &rarr;</span>
+</summary>
+<div class="body">
+<div class="row"><h3><span data-en="What changes in the daily work">Cosa cambia nel lavoro di tutti i giorni</span></h3><div><table class="ba one"><thead><tr><th><span data-en="Today">Oggi</span></th><th class="th-d"><span data-en="With the skill">Con la skill</span></th></tr></thead><tbody><tr><td class="p" data-en="You start from the platform and find out later whether it was needed.">Si parte dalla piattaforma e si scopre dopo se serviva.</td><td class="d" data-en="The qualification test first, which may say no, and the raise sized to the gap.">Prima il test di qualificazione, che può dire no, e la raccolta dimensionata sul fabbisogno.</td></tr></tbody></table></div></div>
+<div class="row"><h3><span data-en="What it does">Cosa fa</span></h3><div><p class="cf" data-en="Decides whether tokenizing makes sense, and if so sets up everything through to exit: wrapper, raise, distribution, custody, lifecycle.">Decide se tokenizzare ha senso, e se sì imposta tutto fino all'uscita: involucro, raccolta, distribuzione, custodia, ciclo di vita.</p><ul class="pt"><li data-en="The qualification test may end the discussion with a no">Il test di qualificazione può chiudere la discussione con un no</li><li data-en="The raise is sized to the funding gap, never to a vanity unit">La raccolta si dimensiona sul fabbisogno, mai su un'unità di vanità</li><li data-en="Two checks: no idle capital, and solvency at exit">Due controlli: niente capitale fermo, e solvibilità all'uscita</li></ul></div></div>
+<div class="row"><h3><span data-en="Needs and gives">Serve e produce</span></h3><div><div class="io"><div><span class="mini"><span data-en="Needs">Serve</span></span><ul><li data-en="The untokenized deal economics">Le economie dell'operazione senza token</li><li data-en="The funding gap to cover">Il fabbisogno da coprire</li><li data-en="Who the intended investors are and from where">Chi sono gli investitori previsti e da dove</li></ul></div><div><span class="mini"><span data-en="Gives">Produce</span></span><ul><li data-en="Qualification verdict">Verdetto di qualificazione</li><li data-en="What the token carries and its legal wrapper">Cosa porta il token e il suo involucro legale</li><li data-en="Raise sizing with the two checks">Dimensionamento della raccolta con i due controlli</li><li data-en="Distribution, custody, lifecycle, exit">Distribuzione, custodia, ciclo di vita, uscita</li></ul></div></div></div></div>
+<div class="row"><h3><span data-en="Example request">Esempio di richiesta</span></h3><div><p class="ask">&ldquo;<span data-en="is it worth tokenizing this deal?">vale la pena tokenizzare questa operazione?</span>&rdquo;</p></div></div>
+<div class="row"><h3><span data-en="Limits">Limiti</span></h3><div><p data-en="It does not choose the platform before knowing what the token carries.">Non sceglie la piattaforma prima di sapere cosa porta il token.</p><div class="chain sm">
+<span class="step"><span data-en="Compliance">Compliance</span></span>
+<span class="arw">&rarr;</span>
+<span class="step on"><span data-en="Structure">Struttura</span></span>
+<span class="arw">&rarr;</span>
+<span class="step"><span data-en="Investors">Investitori</span></span>
+<a class="step go" href="#capital-structuring">capital-structuring</a>
+</div></div></div>
+</div></details>
+<details class="card" id="portfolio-ops" data-all="portfolio-ops Costruisce, aggiorna e verifica il portfolio e il track record, e la pagina che si manda agli investitori Builds, updates and audits the portfolio and track record, and the page investors receive Costruisce, aggiorna e verifica il portfolio, e produce la pagina bilingue che un investitore riceve davvero. Builds, updates and audits the portfolio, and produces the bilingual page an investor actually receives. costruisci il portfolio con queste operazioni build the portfolio from these deals Founder Finance Founder Finance" data-roles="founder finance">
+<summary>
+<span class="n">11</span>
+<small>portfolio-ops</small>
+<b class="t" data-en="Builds, updates and audits the portfolio and track record, and the page investors receive">Costruisce, aggiorna e verifica il portfolio e il track record, e la pagina che si manda agli investitori</b>
+<div class="chips"><span class="chip"><span data-en="Founder">Founder</span></span><span class="chip"><span data-en="Finance">Finance</span></span></div>
+<span class="open"><span data-en="Open">Apri</span> &rarr;</span>
+</summary>
+<div class="body">
+<div class="row"><h3><span data-en="What changes in the daily work">Cosa cambia nel lavoro di tutti i giorni</span></h3><div><table class="ba one"><thead><tr><th><span data-en="Today">Oggi</span></th><th class="th-d"><span data-en="With the skill">Con la skill</span></th></tr></thead><tbody><tr><td class="p" data-en="The track record gets rewritten from scratch each time, and disagrees with last time.">Il track record si riscrive da zero a ogni richiesta, e non torna con la volta prima.</td><td class="d" data-en="One page generated from the sheet, aggregates recomputed, limits declared and numbered.">Una pagina generata dal foglio, aggregati ricalcolati, limiti dichiarati e numerati.</td></tr></tbody></table></div></div>
+<div class="row"><h3><span data-en="What it does">Cosa fa</span></h3><div><p class="cf" data-en="Builds, updates and audits the portfolio, and produces the bilingual page an investor actually receives.">Costruisce, aggiorna e verifica il portfolio, e produce la pagina bilingue che un investitore riceve davvero.</p><ul class="pt"><li data-en="Every field declares whether it is given, derived, missing or in conflict">Ogni campo dichiara se è dato, derivato, mancante o in conflitto</li><li data-en="A portfolio has no single duration: the page says which return it is showing">Un portafoglio non ha una durata unica: la pagina dice quale rendimento mostra</li><li data-en="Declared and numbered limits, plus the disclaimer">Limiti dichiarati e numerati, più il disclaimer</li></ul></div></div>
+<div class="row"><h3><span data-en="Needs and gives">Serve e produce</span></h3><div><div class="io"><div><span class="mini"><span data-en="Needs">Serve</span></span><ul><li data-en="The deal figures, even partial, messy or contradictory">I dati delle operazioni, anche parziali, disordinati o contraddittori</li></ul></div><div><span class="mini"><span data-en="Gives">Produce</span></span><ul><li data-en="The portfolio and track-record page, HTML in one file">La pagina portfolio e track record, HTML in un file solo</li><li data-en="Source sheet updated and audited">Foglio sorgente aggiornato e verificato</li><li data-en="PDF track record">PDF del track record</li><li data-en="Notion sync, where the connector is wired">Sincronizzazione con Notion, dove il connettore è collegato</li></ul></div></div></div></div>
+<div class="row"><h3><span data-en="Example request">Esempio di richiesta</span></h3><div><p class="ask">&ldquo;<span data-en="build the portfolio from these deals">costruisci il portfolio con queste operazioni</span>&rdquo;</p></div></div>
+<div class="row"><h3><span data-en="Limits">Limiti</span></h3><div><p data-en="It does not hold a single deal's model: that stays with business-plan.">Non tiene il modello di una singola operazione: quello resta a business-plan.</p><div class="chain sm">
+<span class="step"><span data-en="Structure">Struttura</span></span>
+<span class="arw">&rarr;</span>
+<span class="step on"><span data-en="Investors">Investitori</span></span>
+<span class="arw">&rarr;</span>
+<span class="step"><span data-en="Sales">Vendita</span></span>
+<a class="step go" href="#investor-teaser">investor-teaser</a>
+<a class="step go" href="#dd-dataroom">dd-dataroom</a>
+</div></div></div>
+</div></details>
+<details class="card alt" id="property-content" data-all="property-content I testi pubblicabili del progetto e di ogni unità, pronti per il CMS e per i motori di ricerca The publishable text for the project and every unit, ready for the CMS and for search Scrive i testi pubblicabili su quattro livelli: progetto, edificio, spazi comuni, unità. Sei blocchi per ciascuno, pronti per il CMS. Writes the publishable text at four levels: project, building, common spaces, unit. Six blocks each, ready for the CMS. scrivi i testi delle unità di questo progetto write the unit texts for this project Marketing Architetto Marketing Architect" data-roles="mkt arch">
+<summary>
+<span class="n">12</span>
+<small>property-content</small>
+<b class="t" data-en="The publishable text for the project and every unit, ready for the CMS and for search">I testi pubblicabili del progetto e di ogni unità, pronti per il CMS e per i motori di ricerca</b>
+<div class="chips"><span class="chip"><span data-en="Marketing">Marketing</span></span><span class="chip"><span data-en="Architect">Architetto</span></span></div>
+<span class="open"><span data-en="Open">Apri</span> &rarr;</span>
+</summary>
+<div class="body">
+<div class="row"><h3><span data-en="What changes in the daily work">Cosa cambia nel lavoro di tutti i giorni</span></h3><div><table class="ba one"><thead><tr><th><span data-en="Today">Oggi</span></th><th class="th-d"><span data-en="With the skill">Con la skill</span></th></tr></thead><tbody><tr><td class="p" data-en="Whoever has time writes the text, and the area on the website is not the one in the brochure.">I testi li scrive chi ha tempo, e la superficie sul sito non è quella della brochure.</td><td class="d" data-en="One record, six blocks, and every view reads the same number.">Un record, sei blocchi, e ogni vista legge lo stesso numero.</td></tr></tbody></table></div></div>
+<div class="row"><h3><span data-en="What it does">Cosa fa</span></h3><div><p class="cf" data-en="Writes the publishable text at four levels: project, building, common spaces, unit. Six blocks each, ready for the CMS.">Scrive i testi pubblicabili su quattro livelli: progetto, edificio, spazi comuni, unità. Sei blocchi per ciascuno, pronti per il CMS.</p><ul class="pt"><li data-en="A short factual answer, built to be extracted by an AI engine">Una risposta breve e fattuale, costruita per essere estratta da un motore AI</li><li data-en="A missing figure is declared, not filled">Un dato che manca viene dichiarato, non riempito</li><li data-en="A non-public price never becomes a number in any view">Prezzo non pubblico non diventa una cifra in nessuna vista</li></ul></div></div>
+<div class="row"><h3><span data-en="Needs and gives">Serve e produce</span></h3><div><div class="io"><div><span class="mini"><span data-en="Needs">Serve</span></span><ul><li data-en="Units, areas, floors, orientation">Unità, superfici, piani, esposizione</li><li data-en="Sale status and price visibility">Stato di vendita e visibilità del prezzo</li><li data-en="Three to five raw strengths from the architects">Tre a cinque punti di forza grezzi dagli architetti</li><li data-en="The language">La lingua</li></ul></div><div><span class="mini"><span data-en="Gives">Produce</span></span><ul><li data-en="The four-level content record, as CMS-ready JSON">Il record dei contenuti su quattro livelli, in JSON pronto per il CMS</li><li data-en="Structured data for search engines">Dati strutturati per i motori di ricerca</li><li data-en="The list of what was missing">L'elenco di cosa mancava</li><li data-en="Profiles: listing, brochure copy, press release, article, post">Profili: scheda, testo brochure, comunicato, articolo, post</li></ul></div></div></div></div>
+<div class="row"><h3><span data-en="Example request">Esempio di richiesta</span></h3><div><p class="ask">&ldquo;<span data-en="write the unit texts for this project">scrivi i testi delle unità di questo progetto</span>&rdquo;</p></div></div>
+<div class="row"><h3><span data-en="Limits">Limiti</span></h3><div><p data-en="No investor vocabulary in front of a buyer. And corporate news with no property in it is not its business.">Niente linguaggio da investitori davanti a un compratore. E le notizie aziendali senza un immobile dentro non sono materia sua.</p><div class="chain sm">
+<span class="step"><span data-en="Investors">Investitori</span></span>
+<span class="arw">&rarr;</span>
+<span class="step on"><span data-en="Sales">Vendita</span></span>
+<a class="step go" href="#sales-brochure">sales-brochure</a>
+</div></div></div>
+</div></details>
+<details class="card alt" id="sales-brochure" data-all="sales-brochure Il documento di vendita impaginato: brochure, scheda unità, flyer The designed sales document: brochure, unit sheet, flyer Monta il documento che riceve un compratore. Di suo non scrive niente: testi dal record, cifre dal modello, aspetto dal design system. Assembles the document a buyer receives. It writes nothing of its own: text from the record, figures from the model, look from the design system. fammi la brochure di questo progetto make the brochure for this project Marketing Architetto Marketing Architect" data-roles="mkt arch">
+<summary>
+<span class="n">13</span>
+<small>sales-brochure</small>
+<b class="t" data-en="The designed sales document: brochure, unit sheet, flyer">Il documento di vendita impaginato: brochure, scheda unità, flyer</b>
+<div class="chips"><span class="chip"><span data-en="Marketing">Marketing</span></span><span class="chip"><span data-en="Architect">Architetto</span></span></div>
+<span class="open"><span data-en="Open">Apri</span> &rarr;</span>
+</summary>
+<div class="body">
+<div class="row"><h3><span data-en="What changes in the daily work">Cosa cambia nel lavoro di tutti i giorni</span></h3><div><table class="ba one"><thead><tr><th><span data-en="Today">Oggi</span></th><th class="th-d"><span data-en="With the skill">Con la skill</span></th></tr></thead><tbody><tr><td class="p" data-en="Every brochure starts from scratch and is reprinted whole when a unit sells.">Ogni brochure riparte da zero e si ristampa tutta quando un'unità si vende.</td><td class="d" data-en="Evergreen body plus a dated insert: when a unit sells you reprint the sheet.">Corpo evergreen più inserto datato: quando un'unità si vende si ristampa il foglio.</td></tr></tbody></table></div></div>
+<div class="row"><h3><span data-en="What it does">Cosa fa</span></h3><div><p class="cf" data-en="Assembles the document a buyer receives. It writes nothing of its own: text from the record, figures from the model, look from the design system.">Monta il documento che riceve un compratore. Di suo non scrive niente: testi dal record, cifre dal modello, aspetto dal design system.</p><ul class="pt"><li data-en="Horizon declared first: a dated document or an evergreen presentation">Orizzonte dichiarato prima: documento datato oppure presentazione evergreen</li><li data-en="The evergreen carries no fact with an expiry: prices go on a separate insert">L'evergreen non contiene dati con una scadenza: prezzi in un inserto a parte</li><li data-en="Our mark is on the cover in every configuration">Il nostro marchio è in copertina in ogni configurazione</li></ul></div></div>
+<div class="row"><h3><span data-en="Needs and gives">Serve e produce</span></h3><div><div class="io"><div><span class="mini"><span data-en="Needs">Serve</span></span><ul><li data-en="The content record">Il record dei contenuti</li><li data-en="Renders, photography, plans and sections">Render, fotografie, piante e sezioni</li><li data-en="The design system, and the project brand where one exists">Il design system, e il marchio di progetto dove esiste</li></ul></div><div><span class="mini"><span data-en="Gives">Produce</span></span><ul><li data-en="Print-ready PDF">PDF pronto per la stampa</li><li data-en="Screen PDF for email">PDF per schermo e mail</li><li data-en="Dated insert with prices and availability">Inserto datato con prezzi e disponibilità</li><li data-en="Unit sheet">Scheda unità</li><li data-en="Flyer">Flyer</li></ul></div></div></div></div>
+<div class="row"><h3><span data-en="Example request">Esempio di richiesta</span></h3><div><p class="ask">&ldquo;<span data-en="make the brochure for this project">fammi la brochure di questo progetto</span>&rdquo;</p></div></div>
+<div class="row"><h3><span data-en="Limits">Limiti</span></h3><div><p data-en="It does not write the text, and it is not investor material.">Non scrive i testi e non è materiale per investitori.</p><div class="chain sm">
+<span class="step"><span data-en="Investors">Investitori</span></span>
+<span class="arw">&rarr;</span>
+<span class="step on"><span data-en="Sales">Vendita</span></span>
+<a class="step go" href="#property-content">property-content</a>
+</div></div></div>
+</div></details>
 </div>
-<h2>Le skill del lato contenuti</h2>
-<div class="cards">
-<div class="card"><span class="nm"><a href="property-content.html">property-content</a></span><p>I testi pubblicabili del progetto e di ogni unità, pronti per il CMS e per i motori di ricerca</p></div>
-<div class="card"><span class="nm"><a href="sales-brochure.html">sales-brochure</a></span><p>Il documento di vendita impaginato: brochure, scheda unità, flyer</p></div>
+<p class="empty" id="empty" style="display:none"><span data-en="No skill matches.">Nessuna skill corrisponde.</span></p>
 </div>
-<h2>Come si concatenano</h2>
-<div class="chain"><strong>Una cartella di materiale e nessuna idea di cosa ci sia dentro</strong><br><span class="step"><a href="project-setup.html">project-setup</a></span><span class="arw">&rarr;</span><span class="step"><a href="architect-data-interpreter.html">architect-data-interpreter</a></span><span class="arw">&rarr;</span><span class="step"><a href="business-plan.html">business-plan</a></span><span class="arw">&rarr;</span><span class="step"><a href="investor-teaser.html">investor-teaser</a></span></div>
-<div class="chain"><strong>Quaranta domande di due diligence in una mail</strong><br><span class="step"><a href="dd-dataroom.html">dd-dataroom</a></span><span class="arw">&rarr;</span><span class="step"><a href="deal-validator.html">deal-validator</a></span></div>
-<div class="chain"><strong>Un investitore estero che vuole entrare</strong><br><span class="step"><a href="foreign-investment-compliance.html">foreign-investment-compliance</a></span><span class="arw">&rarr;</span><span class="step"><a href="capital-structuring.html">capital-structuring</a></span><span class="arw">&rarr;</span><span class="step"><a href="tokenization-setup.html">tokenization-setup</a></span></div>
-<div class="chain"><strong>Un edificio finito e niente con cui venderlo</strong><br><span class="step"><a href="property-content.html">property-content</a></span><span class="arw">&rarr;</span><span class="step"><a href="sales-brochure.html">sales-brochure</a></span><span class="arw">&rarr;</span><span class="step"><a href="deal-validator.html">deal-validator</a></span></div>
-<div class="chain"><strong>Un investitore che chiede il track record</strong><br><span class="step"><a href="portfolio-ops.html">portfolio-ops</a></span><span class="arw">&rarr;</span><span class="step"><a href="deal-validator.html">deal-validator</a></span></div>
-<div class="box"><p>Per ogni operazione con capitale esterno l'ordine è sempre questo: intake, economics, gate di compliance, struttura, wrapper.</p></div>
-<h2>Come si installa</h2>
-<h3>Da zip</h3>
-<p class="sub">Chi non ha un account GitHub</p>
-<ol class="steps">
-<li>Apri Claude, poi Customize, poi Plugins</li>
-<li>Add, poi Upload plugin</li>
-<li>Carica il file zip che ti è stato consegnato, senza scompattarlo</li>
+<div class="blk">
+<p class="lab" data-en="Order comes before the skills">Prima delle skill viene l'ordine</p>
+<p class="claim" data-en="A skill multiplies the order it finds. On a messy Drive it multiplies the mess, faster.">Una skill moltiplica l'ordine che trova. Su un Drive disordinato moltiplica il disordine, più in fretta.</p>
+<div class="opts">
+<div class="opt"><span><b data-en="One source per fact">Una fonte sola per ogni fatto</b><small data-en="If a unit's price lives in three files, the skill reads the wrong one.">Se il prezzo di un'unità vive in tre file, la skill legge quello sbagliato.</small></span></div>
+<div class="opt"><span><b data-en="A declared structure, the same for every project">Una struttura dichiarata, uguale per ogni progetto</b><small data-en="Folders with stable names. Not final_v3_ok.">Cartelle con nomi stabili. Non definitivo_v3_ok.</small></span></div>
+<div class="opt"><span><b data-en="Documents where people look for them">I documenti dove si cercano</b><small data-en="Project material in the project, not in a chat.">Materiale di progetto nel progetto, non in una chat.</small></span></div>
+<div class="opt"><span><b data-en="Shared access">Accesso condiviso</b><small data-en="If the file is on someone's laptop, for the skill it does not exist.">Se il file sta sul portatile di qualcuno, per la skill non esiste.</small></span></div>
+<div class="opt"><span><b data-en="Someone who owns the order">Un responsabile dell'ordine</b><small data-en="A structure with no name beside it lasts three months.">Una struttura senza un nome accanto dura tre mesi.</small></span></div>
+</div>
+<details class="idx"><summary><span data-en="Building the base, in four moves">Costruire la base, in quattro mosse</span></summary><div class="in">
+<ol class="moves">
+<li data-en="Decide where each type of document lives, once, and write it down.">Decidi dove vive ogni tipo di documento, una volta, e scrivilo.</li>
+<li data-en="Give every fact an owner: who updates it, and where.">Dai a ogni fatto un proprietario: chi lo aggiorna, e dove.</li>
+<li data-en="Move, do not copy. A copy is one more truth to contradict.">Sposta, non copiare. Una copia è una verità in più da smentire.</li>
+<li data-en="Each quarter look at what ended up out of place, and why.">Ogni trimestre guarda cosa è finito fuori posto, e perché.</li>
 </ol>
-<p class="sub">Lo zip non si aggiorna da solo: a ogni versione nuova ricevi un nuovo zip, rimuovi la versione precedente dal pannello Plugins e ricarichi.</p>
-<h3>Dal marketplace, account aziendale</h3>
-<p class="sub">Chi usa l'account Claude dell'azienda</p>
-<ol class="steps">
-<li>Apri Customize, poi Plugins, poi Discover</li>
-<li>Cerca Real Estate OS e installa</li>
+<svg class="map" viewBox="0 0 900 250" role="img" xmlns="http://www.w3.org/2000/svg">
+<rect class="pill" x="20" y="58" width="124" height="28" rx="2"/>
+<text class="sk" x="82" y="76" text-anchor="middle" data-en="Model">Modello</text>
+<path class="rail" d="M148 72 L 376 125" fill="none"/>
+<rect class="pill" x="20" y="125" width="124" height="28" rx="2"/>
+<text class="sk" x="82" y="143" text-anchor="middle" data-en="Drawings">Disegni</text>
+<path class="rail" d="M148 139 L 376 125" fill="none"/>
+<rect class="pill" x="20" y="192" width="124" height="28" rx="2"/>
+<text class="sk" x="82" y="210" text-anchor="middle" data-en="Intake">Intake</text>
+<path class="rail" d="M148 206 L 376 125" fill="none"/>
+<rect x="378" y="99" width="144" height="52" rx="2" fill="#0B0E14"/>
+<text x="450" y="130" text-anchor="middle" fill="#F4F1EA" style="font-family:Outfit,Helvetica,sans-serif;font-weight:600;font-size:15px" data-en="The facts">I fatti</text>
+<rect class="pill" x="560" y="58" width="132" height="28" rx="2"/>
+<text class="sk" x="626" y="76" text-anchor="middle" data-en="Teaser">Teaser</text>
+<path class="rail" d="M524 125 L 556 72" fill="none" marker-end="url(#a)"/>
+<rect class="pill" x="560" y="125" width="132" height="28" rx="2"/>
+<text class="sk" x="626" y="143" text-anchor="middle" data-en="FAQ">FAQ</text>
+<path class="rail" d="M524 125 L 556 139" fill="none" marker-end="url(#a)"/>
+<rect class="pill" x="560" y="192" width="132" height="28" rx="2"/>
+<text class="sk" x="626" y="210" text-anchor="middle" data-en="Data room">Data room</text>
+<path class="rail" d="M524 125 L 556 206" fill="none" marker-end="url(#a)"/>
+<rect class="pill" x="710" y="58" width="132" height="28" rx="2"/>
+<text class="sk" x="776" y="76" text-anchor="middle" data-en="Portfolio">Portfolio</text>
+<rect class="pill" x="710" y="125" width="132" height="28" rx="2"/>
+<text class="sk" x="776" y="143" text-anchor="middle" data-en="Listing">Scheda sito</text>
+<rect class="pill" x="710" y="192" width="132" height="28" rx="2"/>
+<text class="sk" x="776" y="210" text-anchor="middle" data-en="Brochure">Brochure</text>
+<path class="rail" d="M692 125 L 706 125" fill="none"/>
+<defs><marker id="a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#A8936F"/></marker></defs>
+</svg>
+<p class="sub" data-en="The facts live in one place. Teaser, FAQ, brochure, listing and portfolio are views that read, not documents that recompute. That is why a figure in a brochure cannot contradict the model.">I fatti stanno in un posto solo. Teaser, FAQ, brochure, scheda e portfolio sono viste che leggono, non documenti che ricalcolano. Per questo un numero in una brochure non può contraddire il modello.</p>
+</div></details>
+</div>
+<div class="blk">
+<p class="lab" data-en="Five real situations">Cinque situazioni vere</p>
+<p class="sub" data-en="Where the data lands does not change the work: CMS, platform or a web page. The record stays the same.">Dove finiscono i dati non cambia il lavoro: CMS, piattaforma o una pagina web. Il record resta lo stesso.</p>
+<div class="scn">
+<div class="c"><p class="r" data-en="CFO">CFO</p><p class="s" data-en="A new deal lands and the business plan is needed.">Arriva un'operazione nuova e serve il business plan.</p><div class="chain"><a class="step go" href="#project-setup">project-setup</a><span class="pair"><span class="arw">&rsaquo;</span><a class="step go" href="#architect-data-interpreter">architect-data-interpreter</a></span><span class="pair"><span class="arw">&rsaquo;</span><a class="step go" href="#business-plan">business-plan</a></span><span class="pair"><span class="arw">&rsaquo;</span><a class="step go" href="#deal-validator">deal-validator</a></span></div><p class="e" data-en="Excel with live formulas, the factsheet, and the flaw list before the bank sees it.">Excel con formule attive, factsheet, e la lista degli errori prima che lo veda la banca.</p></div>
+<div class="c"><p class="r" data-en="Back office">Back office</p><p class="s" data-en="An apartment goes on sale, with the texts and the brochure.">Un appartamento va messo in vendita, con i testi e la brochure.</p><div class="chain"><a class="step go" href="#property-content">property-content</a><span class="pair"><span class="arw">&rsaquo;</span><a class="step go" href="#sales-brochure">sales-brochure</a></span></div><p class="e" data-en="Website listing, brochure PDF and unit sheet. The same numbers everywhere.">Scheda per il sito, brochure PDF e scheda unità. Gli stessi numeri ovunque.</p></div>
+<div class="c"><p class="r" data-en="Marketing">Marketing</p><p class="s" data-en="A campaign on a project is needed: posts, article, press release.">Serve una campagna su un progetto: post, articolo, comunicato.</p><div class="chain"><a class="step go" href="#property-content">property-content</a><span class="pair"><span class="arw">&rsaquo;</span><a class="step go" href="#deal-validator">deal-validator</a></span></div><p class="e" data-en="Three views of one record. No numbers retyped, no prices where they do not belong.">Tre viste dello stesso record. Niente numeri riscritti a mano, niente prezzi dove non vanno.</p></div>
+<div class="c"><p class="r" data-en="Architect">Architetto</p><p class="s" data-en="The project folder is a mess and the areas are needed.">La cartella del progetto è un disastro e servono le superfici.</p><div class="chain"><a class="step go" href="#project-setup">project-setup</a><span class="pair"><span class="arw">&rsaquo;</span><a class="step go" href="#architect-data-interpreter">architect-data-interpreter</a></span></div><p class="e" data-en="An ordered folder, areas read off the drawings, and how much potential the scheme is not using.">Cartella ordinata, superfici estratte dai disegni, e quanto potenziale il progetto non sta usando.</p></div>
+<div class="c"><p class="r" data-en="Sales">Sales</p><p class="s" data-en="An investor asks for the teaser and the track record.">Un investitore chiede il teaser e il track record.</p><div class="chain"><a class="step go" href="#investor-teaser">investor-teaser</a><span class="pair"><span class="arw">&rsaquo;</span><a class="step go" href="#portfolio-ops">portfolio-ops</a></span><span class="pair"><span class="arw">&rsaquo;</span><a class="step go" href="#deal-validator">deal-validator</a></span></div><p class="e" data-en="Teaser, updated portfolio page, and the objections he would raise, before he raises them.">Teaser, pagina portfolio aggiornata, e le obiezioni che farebbe lui, prima che le faccia.</p></div>
+</div></div>
+<div class="blk" id="installa">
+<p class="lab" data-en="How to install">Come si installa</p>
+<div class="inst">
+<div class="c">
+<h3 data-en="Marketplace, company account">Marketplace, account aziendale</h3>
+<div class="who" data-en="If you use the company Claude account">Chi usa l'account Claude dell'azienda</div>
+<span class="bdg y"><span data-en="auto-updates">si aggiorna da sola</span></span>
+<ol>
+<li><span data-en="Customize, then Plugins, then Discover">Customize, poi Plugins, poi Discover</span></li>
+<li><span data-en="Search Real Estate OS and install">Cerca Real Estate OS e installa</span></li>
 </ol>
-<p class="sub">Aggiornamenti automatici.</p>
-<h3>Dal marketplace, account personale</h3>
-<p class="sub">Chi ha un account GitHub con accesso al repository</p>
-<ol class="steps">
-<li>Customize, Plugins, Add marketplace</li>
-<li>Connect GitHub e accetta l'invito al repository</li>
-<li>Installa il plugin realestate-os</li>
+<div class="nt" data-en="The simplest route: no GitHub account, no file to hand over.">La via più semplice: niente account GitHub, niente file da passare.</div>
+</div>
+<div class="c">
+<h3 data-en="Marketplace, personal account">Marketplace, account personale</h3>
+<div class="who" data-en="If you have a GitHub account with access to the repository">Chi ha un account GitHub con accesso al repository</div>
+<span class="bdg y"><span data-en="auto-updates">si aggiorna da sola</span></span>
+<ol>
+<li><span data-en="Customize, Plugins, Add marketplace">Customize, Plugins, Add marketplace</span></li>
+<li><span data-en="Connect GitHub and accept the repository invite">Connect GitHub e accetta l'invito al repository</span></li>
+<li><span data-en="Install the realestate-os plugin">Installa il plugin realestate-os</span></li>
 </ol>
-<p class="sub">Aggiornamenti automatici. Serve l'invito al repository: chiedilo.</p>
-<h3>Da Claude Code</h3>
-<p class="sub">Chi lavora da terminale</p>
-<ol class="steps">
-<li><code>/plugin marketplace add Mr-Hodler/RealEstate-OS</code></li>
-<li><code>/plugin install realestate-os</code></li>
+<div class="nt" data-en="You need the repository invite: ask for it.">Serve l'invito al repository: chiedilo.</div>
+</div>
+<div class="c">
+<h3 data-en="Zip">Zip</h3>
+<div class="who" data-en="If you have no GitHub account">Chi non ha un account GitHub</div>
+<span class="bdg n"><span data-en="manual updates">aggiornamento manuale</span></span>
+<ol>
+<li><span data-en="Customize, then Plugins">Customize, poi Plugins</span></li>
+<li><span data-en="Add, then Upload plugin">Add, poi Upload plugin</span></li>
+<li><span data-en="Upload the zip you were given, without unpacking it">Carica lo zip che ti è stato consegnato, senza scompattarlo</span></li>
 </ol>
-<p class="sub">Aggiornamenti automatici.</p>
-<div class="box"><p>Dentro il plugin, ogni skill ha il suo <code>SKILL.md</code> e il repository ha un README: spiegano tutto in dettaglio.</p></div>
-<h2>Le regole su cui gira tutto</h2><table><tbody>
-<tr><td>Una fonte sola</td><td>I numeri vengono dal modello, i testi dal record dei contenuti. Una vista legge, non ricalcola.</td></tr>
-<tr><td>Mai inventare</td><td>Un dato mancante viene nominato, con chi lo deve fornire. Mai riempito con un numero plausibile.</td></tr>
-<tr><td>Etichetta ogni KPI</td><td>Aggregato o annuo, lordo o netto, progetto o investitore. Una percentuale nuda non esce.</td></tr>
-<tr><td>Due pubblici</td><td>Materiale per investitori e materiale per acquirenti condividono i fatti e non condividono il testo.</td></tr>
-<tr><td>Chi verifica non riscrive</td><td>Chi ha prodotto un documento non lo approva.</td></tr>
-<tr><td>Le norme si riverificano</td><td>I valori normativi si controllano sulle fonti ufficiali al momento dell'uso. Mai a memoria.</td></tr>
+<div class="nt" data-en="Each new version is a new zip: remove the previous one from the Plugins panel first, then upload.">A ogni versione nuova ricevi un nuovo zip: rimuovi prima la versione precedente dal pannello Plugins, poi ricarica.</div>
+</div>
+<div class="c">
+<h3 data-en="Claude Code">Claude Code</h3>
+<div class="who" data-en="If you work from a terminal">Chi lavora da terminale</div>
+<span class="bdg y"><span data-en="auto-updates">si aggiorna da sola</span></span>
+<ol>
+<li><code data-en="/plugin marketplace add Mr-Hodler/RealEstate-OS">/plugin marketplace add Mr-Hodler/RealEstate-OS</code></li>
+<li><code data-en="/plugin install realestate-os">/plugin install realestate-os</code></li>
+</ol>
+<div class="nt" data-en="Same source as the marketplace, from the command line.">Stessa fonte del marketplace, da riga di comando.</div>
+</div>
+</div>
+<p class="sub"><span data-en="Inside the plugin every skill has its SKILL.md, and the repository has a README: both go into detail.">Dentro il plugin ogni skill ha il suo SKILL.md e il repository ha un README: spiegano tutto in dettaglio.</span></p></div>
+<details class="idx"><summary><span data-en="Where each skill comes in">Dove entra ciascuna skill</span></summary><div class="in"><svg class="map" viewBox="0 0 900 182" role="img" xmlns="http://www.w3.org/2000/svg">
+<line class="rail" x1="75" y1="46" x2="825" y2="46"/>
+<circle class="dot" cx="75" cy="46" r="4.5"/>
+<text class="ph" x="75" y="22" text-anchor="middle" data-en="Intake">Intake</text>
+<text class="q" x="75" y="37" text-anchor="middle" data-en="What is in this folder?">Cosa c'è in questa cartella?</text>
+<a href="#project-setup" class="go"><rect class="pill" x="6.0" y="66" width="138.0" height="20" rx="0"/><text class="sk" x="75" y="80" text-anchor="middle" font-size="10.5">project-setup</text></a>
+<a href="#architect-data-interpreter" class="go"><rect class="pill" x="6.0" y="92" width="138.0" height="20" rx="0"/><text class="sk" x="75" y="106" text-anchor="middle" font-size="8.8">architect-data-interpreter</text></a>
+<circle class="dot" cx="225" cy="46" r="4.5"/>
+<text class="ph" x="225" y="22" text-anchor="middle" data-en="Economics">Economics</text>
+<text class="q" x="225" y="37" text-anchor="middle" data-en="Does the deal hold?">L'operazione sta in piedi?</text>
+<a href="#market-research" class="go"><rect class="pill" x="156.0" y="66" width="138.0" height="20" rx="0"/><text class="sk" x="225" y="80" text-anchor="middle" font-size="10.5">market-research</text></a>
+<a href="#business-plan" class="go"><rect class="pill" x="156.0" y="92" width="138.0" height="20" rx="0"/><text class="sk" x="225" y="106" text-anchor="middle" font-size="10.5">business-plan</text></a>
+<a href="#deal-validator" class="go"><rect class="pill" x="156.0" y="118" width="138.0" height="20" rx="0"/><text class="sk" x="225" y="132" text-anchor="middle" font-size="10.5">deal-validator</text></a>
+<circle class="dot" cx="375" cy="46" r="4.5"/>
+<text class="ph" x="375" y="22" text-anchor="middle" data-en="Compliance">Compliance</text>
+<text class="q" x="375" y="37" text-anchor="middle" data-en="May this investor join?">Questo investitore può entrare?</text>
+<a href="#foreign-investment-compliance" class="go"><rect class="pill" x="306.0" y="66" width="138.0" height="20" rx="0"/><text class="sk" x="375" y="80" text-anchor="middle" font-size="7.9">foreign-investment-compliance</text></a>
+<circle class="dot" cx="525" cy="46" r="4.5"/>
+<text class="ph" x="525" y="22" text-anchor="middle" data-en="Structure">Struttura</text>
+<text class="q" x="525" y="37" text-anchor="middle" data-en="Through which vehicle?">Con quale veicolo?</text>
+<a href="#capital-structuring" class="go"><rect class="pill" x="456.0" y="66" width="138.0" height="20" rx="0"/><text class="sk" x="525" y="80" text-anchor="middle" font-size="10.5">capital-structuring</text></a>
+<a href="#tokenization-setup" class="go"><rect class="pill" x="456.0" y="92" width="138.0" height="20" rx="0"/><text class="sk" x="525" y="106" text-anchor="middle" font-size="10.5">tokenization-setup</text></a>
+<circle class="dot" cx="675" cy="46" r="4.5"/>
+<text class="ph" x="675" y="22" text-anchor="middle" data-en="Investors">Investitori</text>
+<text class="q" x="675" y="37" text-anchor="middle" data-en="What do we send?">Cosa mandiamo?</text>
+<a href="#investor-teaser" class="go"><rect class="pill" x="606.0" y="66" width="138.0" height="20" rx="0"/><text class="sk" x="675" y="80" text-anchor="middle" font-size="10.5">investor-teaser</text></a>
+<a href="#dd-dataroom" class="go"><rect class="pill" x="606.0" y="92" width="138.0" height="20" rx="0"/><text class="sk" x="675" y="106" text-anchor="middle" font-size="10.5">dd-dataroom</text></a>
+<a href="#portfolio-ops" class="go"><rect class="pill" x="606.0" y="118" width="138.0" height="20" rx="0"/><text class="sk" x="675" y="132" text-anchor="middle" font-size="10.5">portfolio-ops</text></a>
+<circle class="dot" cx="825" cy="46" r="4.5"/>
+<text class="ph" x="825" y="22" text-anchor="middle" data-en="Sales">Vendita</text>
+<text class="q" x="825" y="37" text-anchor="middle" data-en="How do we sell it?">Come lo vendiamo?</text>
+<a href="#property-content" class="go"><rect class="pill" x="756.0" y="66" width="138.0" height="20" rx="0"/><text class="sk" x="825" y="80" text-anchor="middle" font-size="10.5">property-content</text></a>
+<a href="#sales-brochure" class="go"><rect class="pill" x="756.0" y="92" width="138.0" height="20" rx="0"/><text class="sk" x="825" y="106" text-anchor="middle" font-size="10.5">sales-brochure</text></a>
+</svg></div></details>
+<details class="idx"><summary>
+<span data-en="Who uses them">Chi le usa</span>
+</summary><div class="in">
+<p class="sub" data-en="Who touches which skill in normal work. Nobody is locked out: these are the typical cases.">Chi tocca quale skill nel lavoro normale. Nessuno è escluso: sono i casi tipici.</p>
+<table class="mx"><thead><tr><th></th>
+<th><span data-en="Founder">Founder</span></th>
+<th><span data-en="Finance">Finance</span></th>
+<th><span data-en="Architect">Architetto</span></th>
+<th><span data-en="Marketing">Marketing</span></th>
+<th><span data-en="Legal">Legale</span></th>
+</tr></thead><tbody>
+<tr><td class="k"><a class="go" href="#project-setup">project-setup</a></td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+<tr><td class="k"><a class="go" href="#business-plan">business-plan</a></td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+<tr><td class="k"><a class="go" href="#architect-data-interpreter">architect-data-interpreter</a></td>
+<td class="c"></td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+<tr><td class="k"><a class="go" href="#market-research">market-research</a></td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c">●</td>
+<td class="c"></td>
+</tr>
+<tr><td class="k"><a class="go" href="#deal-validator">deal-validator</a></td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+<tr><td class="k"><a class="go" href="#dd-dataroom">dd-dataroom</a></td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">●</td>
+</tr>
+<tr><td class="k"><a class="go" href="#investor-teaser">investor-teaser</a></td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+<tr><td class="k"><a class="go" href="#foreign-investment-compliance">foreign-investment-compliance</a></td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">●</td>
+</tr>
+<tr><td class="k"><a class="go" href="#capital-structuring">capital-structuring</a></td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">●</td>
+</tr>
+<tr><td class="k"><a class="go" href="#tokenization-setup">tokenization-setup</a></td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">●</td>
+</tr>
+<tr><td class="k"><a class="go" href="#portfolio-ops">portfolio-ops</a></td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+<tr><td class="k"><a class="go" href="#property-content">property-content</a></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c"></td>
+</tr>
+<tr><td class="k"><a class="go" href="#sales-brochure">sales-brochure</a></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c"></td>
+</tr>
 </tbody></table>
-<h2>Regola dati</h2><table><thead><tr><th>Classe</th><th>Nelle skill</th></tr></thead><tbody>
-<tr><td>Pubblico</td><td>Libero</td></tr>
-<tr><td>Interno</td><td>Libero</td></tr>
-<tr><td>Confidenziale</td><td>Non anonimizzato solo nello strumento approvato per iscritto dall'azienda</td></tr>
-<tr><td>Segreto</td><td>Mai</td></tr>
+</div></details>
+<details class="idx"><summary><span data-en="The rules it all runs on">Le regole su cui gira tutto</span></summary><div class="in"><table><tbody>
+<tr><td class="k"><b><span data-en="One source">Una fonte sola</span></b></td><td><span data-en="Numbers come from the model, text from the content record. A view reads; it never recomputes.">I numeri vengono dal modello, i testi dal record dei contenuti. Una vista legge, non ricalcola.</span></td></tr>
+<tr><td class="k"><b><span data-en="Never invent">Mai inventare</span></b></td><td><span data-en="A missing figure is named, with who owes it. Never filled with a plausible number.">Un dato mancante viene nominato, con chi lo deve fornire. Mai riempito con un numero plausibile.</span></td></tr>
+<tr><td class="k"><b><span data-en="Label every KPI">Etichetta ogni KPI</span></b></td><td><span data-en="Aggregate or annual, gross or net, project or investor. A bare percentage does not ship.">Aggregato o annuo, lordo o netto, progetto o investitore. Una percentuale nuda non esce.</span></td></tr>
+<tr><td class="k"><b><span data-en="Two audiences">Due pubblici</span></b></td><td><span data-en="Investor material and buyer material share the facts and never share the text.">Materiale per investitori e materiale per acquirenti condividono i fatti e non condividono il testo.</span></td></tr>
+<tr><td class="k"><b><span data-en="The verifier does not rewrite">Chi verifica non riscrive</span></b></td><td><span data-en="Whoever produced a document does not clear it.">Chi ha prodotto un documento non lo approva.</span></td></tr>
+<tr><td class="k"><b><span data-en="Rules get re-verified">Le norme si riverificano</span></b></td><td><span data-en="Regulatory values are checked against official sources at the time of use. Never from memory.">I valori normativi si controllano sulle fonti ufficiali al momento dell'uso. Mai a memoria.</span></td></tr>
+</tbody></table></div></details>
+<details class="idx"><summary><span data-en="Data classification">Regola dati</span></summary><div class="in"><table><thead><tr><th><span data-en="Class">Classe</span></th><th><span data-en="In the skills">Nelle skill</span></th></tr></thead><tbody>
+<tr><td><b><span data-en="Public">Pubblico</span></b></td><td><span data-en="Free">Libero</span></td></tr>
+<tr><td><b><span data-en="Internal">Interno</span></b></td><td><span data-en="Free">Libero</span></td></tr>
+<tr><td><b><span data-en="Confidential">Confidenziale</span></b></td><td><span data-en="Un-anonymised only in the tool the company approves in writing">Non anonimizzato solo nello strumento approvato per iscritto dall'azienda</span></td></tr>
+<tr><td><b><span data-en="Secret">Segreto</span></b></td><td><span data-en="Never">Mai</span></td></tr>
 </tbody></table>
-<p class="sub">Documenti d'identità, KYC e dati bancari restano fuori dalle skill.</p>
+<p class="sub" data-en="Identity documents, KYC and banking data stay out of the skills in every case.">Documenti d'identità, KYC e dati bancari restano fuori dalle skill in ogni caso.</p>
+</div></details>
 </main>
-<footer><div class="wrap">
-<p>Materiale interno di Orizon21 Group. Documentazione a scopo informativo:
-non &egrave; consulenza finanziaria, legale o fiscale.</p>
-<p>&copy; 2026 Aron Clementi. Tutti i diritti riservati. Il plugin e il suo
-contenuto sono proprietari e riservati; questa pagina descrive cosa fanno le
-skill e non ne riproduce le istruzioni.</p>
-</div></footer>
+<div class="foot">
+<p data-en="Internal material of Orizon21 Group. Documentation for information only: not financial, legal or tax advice.">Materiale interno di Orizon21 Group. Documentazione a scopo informativo: non è consulenza finanziaria, legale o fiscale.</p>
+<p data-en="© 2026 Aron Clementi. All rights reserved. The plugin and its contents are proprietary and confidential; this page describes what the skills do and does not reproduce their instructions.">© 2026 Aron Clementi. Tutti i diritti riservati. Il plugin e il suo contenuto sono proprietari e riservati; questa pagina descrive cosa fanno le skill e non ne riproduce le istruzioni.</p>
+</div>
+<script src="app.js"></script>
 </body>
 </html>
