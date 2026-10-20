@@ -103,6 +103,25 @@ ul.pt li:before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px
 .ask{background:var(--surface);border-radius:12px;padding:12px 16px;
   font-size:17px;color:var(--ink);margin:0}
 
+/* la struttura fissa: la parte che abbiamo deciso noi e che tutto il resto
+   legge. I nomi di cartella sono letterali, quindi monospace e non tradotti. */
+.st-i{font-size:16px;color:var(--ink2);margin:0 0 12px}
+.stb{border-left:3px solid var(--acc-bg);padding-left:14px;margin-bottom:14px}
+.stb:last-child{margin-bottom:0}
+.stb>h4{margin:0 0 7px;font-size:12px;font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--acc)}
+.sv{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.sv code{font:600 13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  background:var(--surface2);border:1px solid var(--line);border-radius:7px;
+  padding:3px 8px;color:var(--ink);white-space:nowrap}
+ul.sr{list-style:none;padding:0;margin:0 0 8px}
+ul.sr li{position:relative;padding-left:16px;font-size:15.5px;color:var(--ink2);
+  margin-bottom:5px}
+ul.sr li:before{content:"";position:absolute;left:0;top:10px;width:8px;
+  height:1px;background:var(--acc2)}
+.stn{font-size:14.5px;color:var(--mute);margin:0}
+.stb>:last-child{margin-bottom:0}
+
 /* opzioni con bordo tratteggiato, come "se vuoi fare di piu" */
 .opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;
   margin-bottom:12px}
